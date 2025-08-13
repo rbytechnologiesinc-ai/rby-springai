@@ -31,10 +31,19 @@
 		<spring-ai.version>1.0.1</spring-ai.version>
 	</properties>
 	<dependencies>
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
 			<artifactId>spring-ai-starter-model-openai</artifactId>
@@ -48,12 +57,16 @@
 			<version>2.3.0</version>
 		</dependency>
 
-
+		<!--		lombok dependecy-->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.30</version> <!-- Latest stable as of May 2025 -->
+			<scope>provided</scope>
 		</dependency>
+
+
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
