@@ -4,7 +4,7 @@ package com.rby.demo.sprinai_demo.controllers.api;
 import com.rby.demo.sprinai_demo.config.TestProps;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import lombok.AllArgsConstructor;
+import lombok.Value;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-@AllArgsConstructor
+@Value
 public class ChatController {
 
-  private final ChatClient chatClient;
-  private final TestProps testProps;
+  ChatClient chatClient;
+  TestProps testProps;
 
   @Operation(summary = "get props")
   @ApiResponse(responseCode = "200", description = "good")
