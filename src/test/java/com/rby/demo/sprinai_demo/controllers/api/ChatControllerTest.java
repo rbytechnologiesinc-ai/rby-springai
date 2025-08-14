@@ -1,5 +1,6 @@
 package com.rby.demo.sprinai_demo.controllers.api;
 
+import com.rby.demo.sprinai_demo.config.TestProps;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,6 +15,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
+//@ActiveProfiles("test")
 public class ChatControllerTest {
 
   @Mock
@@ -27,9 +29,12 @@ public class ChatControllerTest {
 
   private ChatController chatController;
 
+  @Mock
+  private TestProps testProps;
+
   @BeforeEach
   void setUp() {
-    chatController = new ChatController(chatClient);
+    chatController = new ChatController(chatClient, testProps);
   }
 
   @Test
