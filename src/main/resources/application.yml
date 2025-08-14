@@ -1,0 +1,17 @@
+test:
+  region:
+    code: "75013"
+    name: "fooo"
+  name: "yooo"
+  pwd: "doooo"
+  lastName: "booooo"
+spring:
+  ai:
+    openai:
+      apikey: ${OPENAI_API_KEY}
+      imageUrl: https://api.openai.com/v1/images/generations
+  application:
+    name: sprinai-demo
+
+
+
