@@ -1,4 +1,4 @@
-package com.rby.demo.sprinai_demo.controllers;
+package com.rby.demo.sprinai_demo.controllers.api;
 
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -21,7 +21,7 @@ public class ChatController {
   @Operation(summary = "call chatgpt")
   @ApiResponse(responseCode = "200", description = "AI response")
   @GetMapping("/ai")
-  public ResponseEntity<String> getAllPatients() {
+  public ResponseEntity<String> callChatGpt() {
     String response = this.chatClient.prompt()
         .user("what is 1 + 1 ")
         .call()
