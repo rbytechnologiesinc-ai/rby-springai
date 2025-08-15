@@ -8,14 +8,14 @@ import java.util.UUID;
  * Chat response DTO. Includes the AI-generated content, conversation tracking ID, and detailed
  * metadata.
  *
- * @param content        content The primary text content of the AI's reply.
- * @param conversationId conversationId The unique identifier for the conversation, echoed from the
- *                       request.
- * @param metaData       metadata Contains usage information (like token counts) and other metadata
- *                       from the provider.
+ * @param structuredResponse converted content of the AI's reply.
+ * @param conversationId     conversationId The unique identifier for the conversation, echoed from
+ *                           the request.
+ * @param metaData           metadata Contains usage information (like token counts) and other
+ *                           metadata from the provider.
  */
 public record ChatResponse(
-    String content,
+    StructuredResponse structuredResponse,
     UUID conversationId,
     MetaData metaData
 ) {
@@ -42,9 +42,9 @@ public record ChatResponse(
    * @JsonProperty.
    */
   public record Usage(
-      @JsonProperty("prompt_tokens") Long promptTokens,
-      @JsonProperty("generation_tokens") Long generationTokens,
-      @JsonProperty("total_tokens") Long totalTokens
+      @JsonProperty("prompt_tokens") Integer promptTokens,
+      @JsonProperty("generation_tokens") Integer generationTokens,
+      @JsonProperty("total_tokens") Integer totalTokens
   ) {
 
   }

@@ -39,4 +39,17 @@ public class AiConfig {
 //        return builder.build();
 //    }
 
+//  // 1. Define the ChatMemoryRepository bean
+//  @Bean
+//  public ChatMemoryRepository chatMemoryRepository() {
+//    return new InMemoryChatMemoryRepository();
+//  }
+//
+//  // 2. Define the MessageWindowChatMemory bean, which uses the repository.
+//  @Bean
+//  public ChatMemory chatMemory(ChatMemoryRepository chatMemoryRepository) {
+//    // The constructor is a factory method that uses the repository.
+//    // The window size is 30 by default. You can also define it here.
+//    return new MessageWindowChatMemory(chatMemoryRepository);
+//  }
 }

@@ -1,4 +1,4 @@
-package com.rby.demo.sprinai_demo.services;
+package com.rby.demo.sprinai_demo.service;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Autowired;
