@@ -1,9 +1,9 @@
-package com.rby.demo.sprinai_demo.ai.parser;
+package com.rby.demo.sprinai_demo.ai.converter;
 
 import org.springframework.ai.converter.BeanOutputConverter;
 import org.springframework.lang.NonNull;
 
-
+@SuppressWarnings("not used")
 public class CustomBeanOutputConverter<T> extends BeanOutputConverter<T> {
 
   //private static final Logger logger = LoggerFactory.getLogger(CustomBeanOutputParser.class);

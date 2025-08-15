@@ -1,6 +1,7 @@
 package com.rby.demo.sprinai_demo.controllers.api;
 
 import com.rby.demo.sprinai_demo.config.TestProps;
+import com.rby.demo.sprinai_demo.service.ChatService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -29,12 +30,14 @@ public class ChatControllerTest {
 
   private ChatController chatController;
 
-  @Mock
+  private ChatService chatService;
+
+
   private TestProps testProps;
 
   @BeforeEach
   void setUp() {
-    chatController = new ChatController(chatClient, testProps);
+    chatController = new ChatController(chatClient, testProps, chatService);
   }
 
   @Test
